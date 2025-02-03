@@ -4,7 +4,9 @@
 
 This repository is my learning track of [this lesson](https://github.com/PacktPublishing/Node.js-Design-Patterns-Third-Edition).
 
-Each sub-projects are gradually developed with git. Feel free to navigate git commit history.
+Sub-projects are gradually developed with git. Feel free to navigate git commit history.
+
+All tagged versions are runnable.
 
 My node version:
 - node v22.12.0
