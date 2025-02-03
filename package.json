@@ -1,0 +1,28 @@
+{
+  "name": "node-js-design-patterns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node spider-cli.js https://bing.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maribbit/node-js-design-patterns.git"
+  },
+  "keywords": [
+    "design",
+    "pattern"
+  ],
+  "author": "Maribbit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maribbit/node-js-design-patterns/issues"
+  },
+  "homepage": "https://github.com/Maribbit/node-js-design-patterns#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.5",
+    "slug": "^10.0.0",
+    "superagent": "^10.1.1"
+  }
+}
