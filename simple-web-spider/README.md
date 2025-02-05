@@ -12,6 +12,17 @@ Just applied these disciplines:
 2. Create named functions for callbacks.
 3. Modualarize the code.
 
+# Simple Web Spider V2
+
+The function spiderLinks enables the spider to download pages recursively.
+It collects all the `<a>` tags on the HTML page with the same host and download those pages.
+
+The main problem here is how to trigger spider function on an array of URLs sequentially.
+We cannot use callback pattern solely because the length of the array is unknown.
+
+The solution here uses a resursive pattern.
+Checkout the code in demo-recursive-async-iteration to understand the pattern better.
+
 # Usage
 
 Install dependencies and checkout the test script.
@@ -19,3 +30,4 @@ Install dependencies and checkout the test script.
 ```bash
 npm install
 npm run test
+```
