@@ -40,23 +40,27 @@ function spiderLinks (currentUrl, body, nesting, cb) {
     return process.nextTick(cb)
   }
 
-  function iterate (index) { // [2]
-    if (index === links.length) {
+  let completed = 0
+  let hasErrors = false
+  function done (err) {
+    if (err) {
+        hasErrors = true
+        return cb(err)
+    }
+    if (++completed === links.length && !hasErrors) {
       return cb()
     }
-
-    spider(links[index], nesting - 1, function (err) { // [3]
-      if (err) {
-        return cb(err)
-      }
-      iterate(index + 1)
-    })
   }
-
-  iterate(0) // [4]
+  links.forEach(link => spider(link, nesting - 1, done))
 }
 
+const spidering = new Set()
 export function spider (url, nesting, cb) {
+  // prevent racing situation which the same url are fetched in two tasks concurrently
+  if (spidering.has(url)) {
+    return process.nextTick(cb)
+  }
+  spidering.add(url)
   const filename = urlToFilename(url)
   fs.readFile(filename, 'utf8', (err, fileContent) => {
     if (err) {

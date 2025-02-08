@@ -23,6 +23,14 @@ We cannot use callback pattern solely because the length of the array is unknown
 The solution here uses a resursive pattern.
 Checkout the code in demo-recursive-async-iteration to understand the pattern better.
 
+# Simple Web Spider V3
+
+The function spiderLinks can download links faster because all the links on one page are started spidering in one event loop.
+
+There is a racing condition to be dealt with in spider function.
+
+There is also a simplified pattern in demo-concurrent-async-race.
+
 # Usage
 
 Install dependencies and checkout the test script.
