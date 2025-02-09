@@ -31,6 +31,12 @@ There is a racing condition to be dealt with in spider function.
 
 There is also a simplified pattern in demo-concurrent-async-race.
 
+# Simple Web Spider V4
+
+Use task queue to globally limit concurrency.
+
+Checkout demo-task-queue to test this class.
+
 # Usage
 
 Install dependencies and checkout the test script.
