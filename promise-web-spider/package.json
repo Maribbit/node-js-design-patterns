@@ -1,0 +1,17 @@
+{
+  "name": "promise-web-spider",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node spider-cli.js https://cn.bing.com/search?q=cheerio&qs=HS&sk=HS1&sc=10-0&cvid=9B8EE89C92A6484FA7DA1D0C84E1EE07&FORM=QBLH&sp=2&lq=0&rdr=1&rdrig=F05C7A8B4D3C4772BB1F9ED6D2AEEA4B 2 4"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "mkdirp": "^0.5.5",
+    "slug": "^10.0.0",
+    "superagent": "^10.1.1"
+  }
+}
